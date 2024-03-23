@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+div {
+  /* border: 1px solid #000; */
+}
+
+.container {
+  width: 40%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carre {
+  position: relative;
+  display: flex;
+}
+
+.carre-1 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.carre-1-tb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carre-1-lr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c1-top {
+  border: 2px solid #fff;
+  width: 2px;
+  height: 2px;
+  transition: width 1s;
+}
+
+.c1-bottom {
+  border: 2px solid #fff;
+  width: 2px;
+  height: 2px;
+  transition: width 1s;
+}
+.c1-left {
+  border: 2px solid transparent;
+  width: 2px;
+  height: 2px;
+  transition: height 1s ease 1s, border 1s ease 1s;
+}
+.c1-right {
+  border: 2px solid transparent;
+  width: 2px;
+  height: 2px;
+  transition: height 1s ease 1s, border 1s ease 1s;
+  right: 0;
+}
+
+.carre:hover .c1-top {
+  width: 100%;
+}
+
+/* <codev-13/> */
+
+.carre:not(:hover) .c1-top {
+  transition: width 2s, border 2s;
+  border: 2px solid transparent;
+  width: 0%;
+}
+
+.carre:hover .c1-bottom {
+  width: 100%;
+}
+
+.carre:not(:hover) .c1-bottom {
+  transition: width 2s, border 2s;
+  border: 2px solid transparent;
+  width: 0%;
+}
+
+.carre:hover .c1-right {
+  height: 100%;
+  border: 2px solid #fff;
+}
+
+.carre:not(:hover) .c1-right {
+  transition: height 2s, border 2s;
+  border: 2px solid transparent;
+  height: 0%;
+}
+
+.carre:hover .c1-left {
+  height: 100%;
+  border: 2px solid #fff;
+}
+
+.carre:not(:hover) .c1-left {
+  transition: height 2s, border 2s;
+  border: 2px solid transparent;
+  height: 0%;
+}
+
+.carre-2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  rotate: 45deg;
+  z-index: 2;
+  background-color: red;
+}
+
+.carre-2-tb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carre-2-lr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c2-top {
+  border: 2px solid transparent;
+  width: 2px;
+  height: 2px;
+  transition: width 1s ease 2s, border 1s ease 2s;
+}
+
+.c2-bottom {
+  border: 2px solid transparent;
+  width: 2px;
+  height: 2px;
+  transition: width 1s ease 2s, border 1s ease 2s;
+}
+.c2-left {
+  border: 2px solid transparent;
+  width: 2px;
+  height: 2px;
+  transition: height 1s ease 3s, border 1s ease 3s;
+}
+.c2-right {
+  border: 2px solid transparent;
+  width: 2px;
+  height: 2px;
+  transition: height 1s ease 3s, border 1s ease 3s;
+  right: 0;
+}
+
+.carre:hover .c2-top {
+  border: 2px solid #fff;
+  width: 100%;
+}
+
+.carre:not(:hover) .c2-top {
+  transition: width 2s, border 2s;
+  border: 2px solid transparent;
+  width: 0%;
+}
+
+.carre:hover .c2-bottom {
+  border: 2px solid #fff;
+  width: 100%;
+}
+
+.carre:not(:hover) .c2-bottom {
+  transition: width 2s, border 2s;
+  border: 2px solid transparent;
+  width: 0%;
+}
+
+.carre:hover .c2-right {
+  border: 2px solid #fff;
+  height: 100%;
+}
+
+.carre:not(:hover) .c2-right {
+  transition: height 2s, border 2s;
+  border: 2px solid transparent;
+  height: 0%;
+}
+
+.carre:hover .c2-left {
+  border: 2px solid #fff;
+  height: 100%;
+}
+
+.carre:not(:hover) .c2-left {
+  transition: height 2s, border 2s;
+  border: 2px solid transparent;
+  height: 0%;
+}
+
+.texte {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  font-family: "Cascadia Code";
+  font-weight: bold;
+}
+
+.texte-noire {
+  font-size: 24px;
+}
+
+.text-very {
+  font-size: 35px;
+  color: white;
+}
+
+/* Apply to 1 property */
+/* property name | duration */
+/* transition: margin-right 4s; */
+
+/* property name | duration | delay */
+/* transition: margin-right 4s 1s; */
+
+/* property name | duration | easing function */
+/* transition: margin-right 4s ease-in-out; */
+
+/* property name | duration | easing function | delay */
+/* transition: margin-right 4s ease-in-out 1s; */
+
+/* property name | duration | behavior */
+/* transition: display 4s allow-discrete; */
+
+/* Apply to 2 properties */
+/* transition:
+  margin-right 4s,
+  color 1s; */
+
+/* Apply to all changed properties */
+/* transition: all 0.5s ease-out allow-discrete;
+transition: 200ms linear 50ms; */
+
+/* Global values */
+/* transition: inherit;
+transition: initial;
+transition: revert;
+transition: revert-layer;
+transition: unset; */

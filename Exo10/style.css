@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222;
+}
+
+div {
+  /* border: 1px solid #000; */
+}
+
+.container {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boite {
+  width: 300px;
+  height: 80px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  /* overflow: hidden; */
+  /* border: 4px solid #cccccc; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  color: #cccccc;
+  background-color: #b0020a;
+  z-index: 1;
+  transform: scale(7%, 25%);
+  transform-origin: 0% 50%;
+  border-radius: 100%;
+  opacity: 0;
+  transition: transform 0.5s, transform-origin 0.5s, border-radius 0.5s,
+    opacity 0.5s;
+}
+
+.item2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  color: #cccccc;
+  background-color: #b0020a;
+  z-index: 1;
+  transform: scale(7%, 25%);
+  transform-origin: 100% 50%;
+  border-radius: 100%;
+  opacity: 0;
+  transition: transform 0.5s, transform-origin 0.5s, border-radius 0.5s,
+    opacity 0.5s;
+}
+
+.item3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  color: #cccccc;
+  background-color: #b0020a;
+  z-index: 1;
+  transform: scale(7%, 25%);
+  transform-origin: -40% 50%;
+  border-radius: 100%;
+  opacity: 0;
+  transition: transform 0.5s, transform-origin 0.5s, border-radius 0.5s,
+    opacity 0.5s;
+}
+
+.item4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  color: #cccccc;
+  background-color: #b0020a;
+  z-index: 1;
+  transform: scale(7%, 25%);
+  transform-origin: 140% 50%;
+  border-radius: 100%;
+  opacity: 0;
+  transition: transform 0.5s, transform-origin 0.5s, border-radius 0.5s,
+    opacity 0.5s;
+}
+
+.item5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  color: #cccccc;
+  background-color: #b0020a;
+  z-index: 2;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: transform 0.5s ease 0.5s;
+}
+
+.texte {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  color: #b0020a;
+  /* background-color: black; */
+  z-index: 4;
+  transition: color 0.5s ease 0.5s;
+}
+
+.boite:hover .texte {
+}
+
+.boite:hover {
+  .item1 {
+    transform: scale(7%, 25%);
+    transform-origin: center;
+    border-radius: 100%;
+    opacity: 1;
+  }
+  .item2 {
+    transform: scale(7%, 25%);
+    transform-origin: center;
+    border-radius: 100%;
+    opacity: 1;
+  }
+
+  .item3 {
+    transform: scale(7%, 25%);
+    transform-origin: 40% center;
+    border-radius: 100%;
+    opacity: 1;
+  }
+  .item4 {
+    transform: scale(7%, 25%);
+    transform-origin: 60% center;
+    border-radius: 100%;
+    opacity: 1;
+  }
+  .item5 {
+    transform: scale(1);
+  }
+  .texte {
+    color: white;
+  }
+}
