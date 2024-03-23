@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: white;
 }
 
 div {
@@ -30,27 +30,43 @@ div {
   position: relative;
   justify-content: space-between;
   align-items: end;
-  overflow: hidden;
-  border: 4px solid #cccccc;
+  /* overflow: hidden; */
   display: flex;
   flex-wrap: wrap;
 }
 
 .item1 {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 103%;
+  height: 110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cascadia Code";
+  font-size: 40px;
+  top: 0;
+  color: #cccccc;
+  background-color: red;
+  z-index: 1;
+  transform-origin: bottom;
+  transition: transform 1s;
+}
+.item2 {
+  position: absolute;
+  width: 103%;
+  height: 110%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Cascadia Code";
   font-size: 40px;
   color: #cccccc;
-  /* background-color: #7cb83a; */
-  z-index: 0;
-  transform: scale(5.4);
-  opacity: 0;
-  transition: transform 1s, opacity 1s;
+  background-color: green;
+  opacity: 0.8;
+  right: 0;
+  z-index: 2;
+  transform-origin: top;
+  transition: transform 1s;
 }
 
 .texte {
@@ -61,16 +77,23 @@ div {
   align-items: center;
   justify-content: center;
   font-family: "Cascadia Code";
-  font-size: 40px;
+  font-size: 35px;
   color: white;
-  /* background-color: black; */
-  z-index: 2;
+  background-color: black;
+  z-index: 3;
+  font-weight: bold;
+  transition: color 1s, background-color 0.5s;
 }
 
 .boite:hover .texte {
+  color: #e8c027;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .boite:hover .item1 {
-  transform: scale(1);
-  opacity: 1;
+  transform: perspective(970px) scaleZ(-2) rotateX(78deg);
+}
+
+.boite:hover .item2 {
+  transform: perspective(870px) scaleZ(2) rotateX(78deg);
 }
